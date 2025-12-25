@@ -1,0 +1,246 @@
+{
+  "info": {
+    "_postman_id": "personnel-management-api",
+    "name": "Personnel Management API",
+    "description": "API endpoints for Personnel Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Employees",
+      "item": [
+        {
+          "name": "Get All Employees",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3500/api/employees",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3500",
+              "path": ["api", "employees"]
+            },
+            "description": "Fetch all employees from the database"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Employee by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3500/api/employees/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3500",
+              "path": ["api", "employees", "1"]
+            },
+            "description": "Get a specific employee by ID"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Employee",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"Sanugi\",\n  \"last_name\": \"Weerasinghe\",\n  \"email\": \"sanugi@gmail.com\",\n  \"phone\": \"0740733547\",\n  \"department_id\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3500/api/employees",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3500",
+              "path": ["api", "employees"]
+            },
+            "description": "Create a new employee"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Employee",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"Sanugi\",\n  \"last_name\": \"Weerasinghe\",\n  \"email\": \"sanugi.updated@gmail.com\",\n  \"phone\": \"0740733547\",\n  \"department_id\": 2\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3500/api/employees/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3500",
+              "path": ["api", "employees", "1"]
+            },
+            "description": "Update an existing employee"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Employee",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3500/api/employees/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3500",
+              "path": ["api", "employees", "1"]
+            },
+            "description": "Delete an employee by ID"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Departments",
+      "item": [
+        {
+          "name": "Get All Departments",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3500/api/departments",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3500",
+              "path": ["api", "departments"]
+            },
+            "description": "Fetch all departments"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Department by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3500/api/departments/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3500",
+              "path": ["api", "departments", "1"]
+            },
+            "description": "Get a specific department by ID"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Department",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Engineering\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3500/api/departments",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3500",
+              "path": ["api", "departments"]
+            },
+            "description": "Create a new department"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Department",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Software Engineering\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3500/api/departments/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3500",
+              "path": ["api", "departments", "1"]
+            },
+            "description": "Update an existing department"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Department",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3500/api/departments/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3500",
+              "path": ["api", "departments", "1"]
+            },
+            "description": "Delete a department by ID"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
